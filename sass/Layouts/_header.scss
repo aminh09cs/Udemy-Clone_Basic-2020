@@ -1,0 +1,114 @@
+.myHeader{
+    box-shadow: 0 0 10px 1px black;
+    .myHeader__left{
+        display: flex;
+        align-items: center;
+        .navbar-brand{
+            img{
+                width: 110px;
+            }
+            flex-grow: 1;
+            margin-right: 0;
+            text-align: center;
+            .logo-theme-white{
+                display: inline-block;
+            }
+            .logo-theme-dark{
+                display: none;
+            }
+        }
+        .myHeader__catogories{
+            flex-grow: 1;
+            text-align: center;
+            @include styleText($color-black-light, $fs-1, $fw-0);
+            cursor: pointer;
+            i{
+                color: $color-gray-3;
+            }
+        }
+        .myHeader__form-search{
+            flex-grow: 8;
+            @include styleFormSearch($color-white-cream, $color-white-0, $color-gray-4)
+        }
+    }
+    .myHeader__right{
+        .navbar-nav{
+            justify-content: space-between;
+            align-items: center;
+            .nav-item{
+                padding: $pd-0 $pd-2;
+                border-radius: 2px;
+                position: relative;
+                .button--white{
+                    width: 85px;
+                }
+                .button--red{
+                    width: 85px;
+                }
+                .nav-link{
+                    @include styleText($color-black-light, $fs-1 - 2, $fw-0);
+                }
+                &:hover{
+                    background-color: $color-gray-1;
+                    .overplay{
+                        display: block;
+                    }
+                }
+                .overplay{
+                    display: none;
+                    background-color: $color-white-0;
+                    width: 333px;
+                    padding: 20px;
+                    text-align: center;
+                    position: absolute;
+                    top: 100%;
+                    right: 0;
+                }
+            }
+            .business a, .instructor a{
+                white-space: nowrap;
+            }
+            .myHeader__cart{
+                width: 50px;
+                height: 50px;
+                text-align: center;
+                line-height: 19px;
+                .nav-link{
+                    font-size: $fs-2 / 2;
+                }
+                &:hover{
+                    background-color: $color-gray-1;
+                    border-radius: 50%;
+                }
+            }
+            .myHeader__button{
+                &:hover{
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+    // @media screen and (min-width:1200px) and(max-width:1355px){
+        
+    // }
+    //max-1200px
+    @include responsive('extra-large'){
+        .business, .instructor{
+            display: none;
+        }
+    }
+    @include responsive('medium'){
+        .myHeader__left{
+            .myHeader__catogories, .myHeader__form-search{
+                display: none;
+            }
+        }
+        .myHeader__right{
+            width: 25%;
+            margin-left: auto;
+           .myHeader__button{
+            display: none;
+           }
+        }
+    }
+}

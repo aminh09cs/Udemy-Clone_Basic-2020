@@ -1,0 +1,18 @@
+.darkMode{
+    header{
+        background-color: $color-dark-4;
+        .myHeader__left{
+            .navbar-brand{
+                .logo-theme-white{
+                    display: none;
+                }
+                .logo-theme-dark{
+                    display: inline-block;
+                }
+            }
+            .myHeader__catogories{
+                color: $color-dark-3;
+            }
+        }
+    }
+}

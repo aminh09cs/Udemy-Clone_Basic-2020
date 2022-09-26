@@ -1,0 +1,63 @@
+.sidebarMode{
+    width: 400px;
+    position: fixed;
+    top: 25%;
+    right: 0;
+    z-index: 999 ;
+    background-color: #dedfe0;
+    transform: translateX(100%);
+    transition: all .5s;
+    .sidebarMode__button{
+        @include styleButton($color-black-0, #dedfe0, #dedfe0, $fs-5, $fw-0, $pd-2, $pd-0 * 2);
+        border-radius: 10px 0 0 10px;
+        position: fixed;
+        transform: translateX(-100%);
+    }
+    .sidebarMode__content{
+        width: 160px;
+        padding: 20px;
+        text-align: center;
+        h2{
+            font-size: 15px;
+        }
+        .switch{
+            cursor: pointer;
+            width: 50px;
+            height: 25px;
+            margin: 0 10px;
+            position: relative;
+            input{
+                display: none;
+                &:checked + .slider{
+                    &::before{
+                        transform: translateX(21px);
+                        background-color: black;
+                    }
+                    background-color: white;
+                }
+            }
+            .slider{
+                background-color: #cccccc;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                border-radius: 34px;
+                &::before{
+                    content:"";
+                    width: 18px;
+                    height: 18px;
+                    background-color: white;
+                    border-radius: 50%;
+                    display: block;
+                    position: absolute;
+                    bottom: 4px;
+                    left: 4px;
+                    transition: all .5s;
+                }
+            }
+        }
+    }
+    &.opened{
+        transform: translateX(60%); 
+    }
+}   

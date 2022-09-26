@@ -1,0 +1,38 @@
+.intro{
+    background: linear-gradient(-57deg, $color-red-0, $color-purple-0);
+    padding: 20px;
+    .intro__content{
+        width: 80%;
+        margin: 0 auto;
+        i{
+            display: inline-block;
+            font-size: 50px;
+            color: $color-white-0;
+            padding-right: 20px;
+        }
+        .intro__detail{
+            display: inline-block;
+            p{
+                margin-bottom: 0;
+            }
+            p:first-child{
+                @include styleText($color-white-0, $fs-3 - 1, $fw-2);
+            }
+            p:last-child{
+                @include styleText($color-white-0, $fs-3 - 0, $fw-0);
+            }
+        }
+    }
+    @include responsive('extra-large'){
+            .intro__content{
+                .intro__items{
+                    i{
+                        display: none;
+                    }
+                }
+            }
+    }
+    @include responsive('medium'){
+            display: none; //config
+    }
+}

@@ -1,0 +1,28 @@
+footer{
+    @include styleText($color-gray-0, $fs-1, $fw-0);
+    .footer__top{
+        width: 90%;
+        margin: 40px auto;
+        ul{
+            height: 110px;
+            .nav-item{
+                flex-basis: 25%;
+                .nav-link{
+                    color: $color-blue-0;
+                }
+            }
+        }
+        .btn-group{
+            .button--dropup{
+                display: block;
+                min-width: 150px;
+                i{
+                    padding: 0 $pd-2;
+                }
+                &::after{
+                    margin-left: 30%;
+                }
+            }
+        }
+    }
+}

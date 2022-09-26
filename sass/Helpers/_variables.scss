@@ -1,0 +1,61 @@
+//Color
+$color-black-0: #29303b;
+$color-white-0: #fff;
+$color-black-light: #505763;
+$color-white-cream: #f2f3f5;
+$color-red-0: #ec5252;
+$color-red-1: #521822;
+$color-gray-0: #686f7a;
+$color-gray-1: rgba(20, 23, 28, 0.05);
+$color-gray-2: #dee2e6;
+$color-gray-3: #a1a7b3;
+$color-gray-4: #505763;
+$color-blue-0: #007791;
+$color-blue-1: #76c5d6;
+$color-yellow-0: #f4ca50;
+$color-purple-0: #6e1a52;
+//Dark Color (COLOR)
+$color-dark-0: #152e4d;
+$color-dark-1: #061325;
+$color-dark-2: #344050;
+$color-dark-3: #9da9bb;
+$color-dark-4: #0e1c2f;
+
+//font-size
+$fs-0: 15px;
+$fs-1: 13px;
+$fs-2: 40px;
+$fs-3: 18px;
+$fs-4: 36px;
+$fs-5: 24px;
+
+
+//font-weight
+$fw-0: normal;
+$fw-1: 600;
+$fw-2: 700;
+
+//line-height
+$line-height-0: 1.43;
+
+//margin
+$mg-0:5px;
+$mg-1:25px;
+$mg-2:20px;
+
+//padding
+$pd-0:10px;
+$pd-1:15px;
+$pd-2:5px;
+
+//border-radius
+$border-radius: 2px;
+
+//break-points //screen --> 
+$breakpoints:(
+    'extra-large': 1200px,
+    'large': 992px,
+    'medium': 768px,
+    'small': 576px,
+
+)

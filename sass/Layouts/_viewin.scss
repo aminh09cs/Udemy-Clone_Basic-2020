@@ -1,0 +1,10 @@
+.viewin{
+    margin: $mg-1 0;
+    .viewin__content{
+        width: 90%;
+        margin: 0 auto;
+        h1{
+            @include styleText($color-black-0, $fs-3, $fw-2);
+        }
+    }
+}
